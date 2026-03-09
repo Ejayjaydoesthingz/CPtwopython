@@ -104,11 +104,130 @@ elif not username.isalpha():
 else:
     print(f"welcome {username}!!")"""
     
-credit_card = "1267-2546-7674-9672"
+"""credit_card = "1267-2546-7674-9672"
 last_four = credit_card[-4:]
 print("last four digits:", last_four)
 
 reversed_card = credit_card[::-1]
-print("reversed:", reversed_card)
+print("reversed:", reversed_card)"""
     
+#example: loops
 
+#WHILE
+
+"""username = input("enter ur username: ")
+
+while username == "":
+    print("u didnt enter ur username")
+    username = input("enter ur username: ")
+    
+print(f"welcome {username}!")
+"""
+
+"""number = int(input("enter a numbah: "))
+
+while number < 1 or number > 20:
+    if number < 1:
+        print("the number u entered is less than 1 :p")
+        number = int(input("enter a numbah: "))
+    elif number > 20:
+        print("ur number is bigger than 20 man")
+        number = int(input("enter a numbah: "))
+    
+print(f"number is {number}")"""
+
+"""favfood = input("enter ur fav food (enter q to quit): ")
+
+while not favfood == "q":
+    print(f"ur favfood is {favfood}")
+    favfood = favfood = input("enter another fav food (enter q to quit): ")
+    
+print("thank u for telling me ur fav food")
+"""
+
+"""for x in range(1, 10):
+    if x == 6:
+        print(x)
+        break
+    else:
+     print(x, end=",")"""
+     
+"""colors = ["red","blue","yellow"]
+colors.append("green")
+colors.append("periwinkle")
+
+print(colors[::-1])
+
+#list to while
+
+index = 0
+
+while index < len(colors):
+    print(f"colors: {colors[index]}")
+    index += 1
+    
+print("thats all da colors")
+
+#list to loop
+
+for x in range(2, len(colors)):
+    print(f"colors: {colors[x]}")"""
+    
+#example: fanction
+
+"""def addition(numberwan, numbertwo):
+    sum = numberwan + numbertwo
+    print(f"the sum of two numbers is {sum}")
+    
+addition(12, 55)
+"""
+
+"""def addition(Name, Age, Country):
+    print(f"Their name is {Name}, their Age is {Age}, and their Country is {Country}")
+
+addition("Raymond", 34, "USA")"""
+    
+#example: class
+
+class Student:
+    
+    total_student = 0
+    total_GPA = 0
+    
+    def __init__(self, name, course, GPA):
+        self.name = name
+        self.course = course
+        self.GPA = GPA
+        Student.total_student += 1
+        Student.total_GPA += GPA
+        
+        
+    def get_info(self):
+        print(f"my name is {self.name}, my course is {self.course}")
+        
+    @staticmethod
+    def isValid_course(course):
+        valid_course = ["BSCS", "BMMA", "BSEMC"]
+        for x in valid_course:
+           if x == course:
+               print("this is a valid course")
+               
+    @classmethod
+    def get_average_GPA(cls):
+        ave = cls.total_GPA / cls.total_student
+        print(f"the average gpa of all is {ave}")
+               
+               
+
+studentOne = Student("Fred", "BMMA", 87.43)
+studentTwo = Student("Gerry", "BSCS", 92.11)
+studentThree = Student("Larry", "BSEMC", 78.59)
+
+print(f"Student one name: {studentOne.name}, Course {studentOne.course}")
+print(f"Student two name: {studentTwo.name}, Course {studentTwo.course}")
+print(f"Student three name: {studentThree.name}, Course {studentThree.course}")
+
+#Student.isValid_course(studentTwo.course)
+Student.get_average_GPA()
+
+#studentOne.get_info()
