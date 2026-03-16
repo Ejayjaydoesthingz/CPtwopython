@@ -1,0 +1,58 @@
+#Question 1
+class Q1:
+ 
+        
+        List_values = [10, 15, 20, 30]
+
+        print(f"List values: {List_values}")
+
+        avg = sum(List_values) / len(List_values)
+
+        print(f"The average of 10 , 15 , 20 , 30 is: {avg}")
+    
+
+#Question 3
+class Q3:
+    
+        
+        List_One = [1, 20, 3, 6, 8, 9, 10, 7, 12, 21, 18]
+        List_Two = [10, 2, 30, 15, 8, 21, 13, 18, 28, 25, 16]
+        duplicates = set()
+    
+        print("List One: [1, 20, 3, 6, 8, 9, 10, 7, 12, 21, 18]")
+        print("List Two: [10, 2, 30, 15, 8, 21, 13, 18, 28, 25, 16]")
+
+        print (f"All same numbers on both List: {set(List_One) & set(List_Two)}")
+
+#Question 2
+class Q2:
+        
+        people = [ 
+                ('Kurt', 15), 
+                ('Carl', 23), 
+                ('JK', 45), 
+                ('James', 60), 
+                ('Kelvin', 39), 
+                ('Haze', 18), 
+                ('Gaze', 10), 
+                ('Soap', 20),
+                ('Price', 23),
+                ('Mcqueen', 80),
+                ('Bascreveil', 50)
+                ]
+    
+        age_input = int(input("Enter an age:"))
+
+        print(f"Person with the lower age than {age_input}")
+    
+        for name, age in people:
+            if age < age_input:
+                print("Name:", name, "Age:", age)
+
+def Acitivity():
+    qone = Q1
+    qtwo = Q2
+    qthree = Q3
+    
+    
+    
